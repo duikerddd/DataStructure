@@ -321,31 +321,6 @@ int IsBalance2(BNode *root, int *pHeight)
 }
 
 
-BNode *GetNearestAncestor(BNode *root, BNode *n1, BNode *n2)
-{
-	BNode *n1InLeft= Search(root->left, n1->data);
-	BNode *n2InLeft = Search(root->left, n2->data);
-
-	if (n1InLeft && !n2InLeft)
-	{
-		return root;
-	}
-
-	if (!n1InLeft && n2InLeft)
-	{
-		return root;
-	}
-
-	if (n1InLeft)
-	{
-		return GetNearestAncestor(root->left, n1, n2);
-	}
-	else
-	{
-		return GetNearestAncestor(root->right, n1, n2);
-	}
-
-}
 
 int MAX3(int a, int b, int c)
 {
@@ -359,6 +334,7 @@ int MAX3(int a, int b, int c)
 	}
 	 return c;
 }
+
 
 int GetFarrestDistance(BNode *root)
 {
@@ -376,6 +352,7 @@ int GetFarrestDistance(BNode *root)
 
 	return MAX3(leftDistance, rightDistance, rootDistance);
 }
+
 
 BNode * CreateTree3(TDataType preorder[], TDataType inorder[], int size);
 
