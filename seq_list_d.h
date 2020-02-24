@@ -70,6 +70,7 @@ void SeqListPushBack(SeqListD *pSeq, DDataType data)
 
 }
 
+
 void Test()
 {
 	SeqListD seq;
