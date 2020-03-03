@@ -336,22 +336,7 @@ int MAX3(int a, int b, int c)
 }
 
 
-int GetFarrestDistance(BNode *root)
-{
-	if (root == NULL)
-	{
-		return 0;
-	}
 
-	int leftDistance = GetFarrestDistance(root->left);
-	int rightDistance = GetFarrestDistance(root->right);
-
-	int leftHeight = GetHeight(root->left);
-	int rightHeight = GetHeight(root->right);
-	int rootDistance = leftHeight + rightHeight;
-
-	return MAX3(leftDistance, rightDistance, rootDistance);
-}
 
 
 BNode * CreateTree3(TDataType preorder[], TDataType inorder[], int size);
