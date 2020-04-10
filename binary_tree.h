@@ -210,59 +210,6 @@ void InorderLoop(BNode *root)
 	}
 }
 
-void PostorderLoop(BNode *root)
-{
-	Stack stack;
-	StackInit(&stack);
-	BNode *node = root;
-	BNode *top;
-	BNode *last = NULL;
-
-	while (node != NULL || !StackEmpty(&stack)){
-		while (node != NULL)
-		{
-			StackPush(&stack, node); //压栈,压的是结点地址
-			node = node->left;
-		}
-
-		top = StackTop(&stack);
-		if (top->right == NULL || top->right == last)
-		{
-			printf("%d ", top->data);
-			last = top;
-			StackPop(&stack);
-		}
-		else{
-			node = top->right;
-		}
-	}
-}
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`	
-
-
-
-
-
-
-int MAX3(int a, int b, int c)
-{
-	if (a >= b && a >= c)
-	{
-		return a;
-	}
-	 if (b >= a && b >= c)
-	{
-		return b;
-	}
-	 return c;
-}
-
-
-
-
-
-BNode * CreateTree3(TDataType preorder[], TDataType inorder[], int size);
 
 
 
