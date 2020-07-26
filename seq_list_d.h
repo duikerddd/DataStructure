@@ -3,7 +3,6 @@
 #include<stdlib.h>
 #include<assert.h>
 
-
 typedef int DDataType;
 
 typedef struct{
