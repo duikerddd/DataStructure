@@ -9,6 +9,7 @@ void Swap(int *p1, int *p2)
 	*p2 = tmp;
 }
 
+
 void BubbleSort(int *a, int n)
 {
 	//外层控制单趟排序
@@ -32,3 +33,4 @@ void BubbleSort(int *a, int n)
 		}
 	}
 }
+
