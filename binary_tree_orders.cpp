@@ -15,6 +15,8 @@ void Preorder(BNode *root)
 }
 
 
+
+
 void Inorder(BNode *root)
 {
 	//终止条件
