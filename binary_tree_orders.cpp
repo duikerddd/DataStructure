@@ -14,6 +14,7 @@ void Preorder(BNode *root)
 	Preorder(root->right);
 }
 
+
 void Inorder(BNode *root)
 {
 	//终止条件
@@ -30,6 +31,7 @@ void Inorder(BNode *root)
 	Inorder(root->right);
 }
 
+
 void Postorder(BNode *root)
 {
 	//终止条件
@@ -44,4 +46,6 @@ void Postorder(BNode *root)
 	Postorder(root->right);
 	//根
 	printf("%d ", root->data);
+
 }
+
