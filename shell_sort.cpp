@@ -25,3 +25,33 @@ void ShellSort(int *a, int n)
 		}
 	}
 }
+
+//C++
+vector<int>& ShellSort(vector<int>& arr)
+{
+	int len = arr.size();
+	int gap = len/2;
+
+	//分组
+	for (; gap > 0; gap /= 2)
+	{
+		//按组插入排序
+		for (int i = gap; i < len; ++i)
+		{
+			int tmp = arr[i];
+			int cur = i - gap;
+			//插入排序: 数据后移,直到找到对的地方
+			while (cur>=0 && arr[cur]>tmp)
+			{
+				arr[cur + gap] = arr[cur];
+				cur -= gap;
+			}
+			//插入
+			arr[cur + gap] = tmp;
+		}
+
+	}
+
+
+	return arr;
+}
